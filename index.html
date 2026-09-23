@@ -8,142 +8,172 @@
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#eef8ff;
-  color:#073b78;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#eef8ff;
+ color:#073b78;
 }
 .app{
-  max-width:430px;
-  min-height:100vh;
-  margin:auto;
-  background:linear-gradient(#fff 75%,#dff3ff);
-  text-align:center;
+ max-width:430px;
+ min-height:100vh;
+ margin:auto;
+ background:linear-gradient(#fff 75%,#dff3ff);
+ text-align:center;
 }
 .header{
-  padding:20px 14px 10px;
-  display:grid;
-  grid-template-columns:70px 1fr 70px;
-  align-items:center;
-  gap:6px;
-  font-size:9px;
-  font-weight:bold;
+ padding:20px 14px 10px;
+ display:grid;
+ grid-template-columns:70px 1fr 70px;
+ align-items:center;
+ gap:6px;
+ font-size:9px;
+ font-weight:bold;
 }
 .logo{
-  width:50px;height:50px;
-  margin:auto;
-  border-radius:50%;
-  background:#087ac1;
-  border:5px solid #d8b33c;
+ width:50px;height:50px;
+ margin:auto;
+ border-radius:50%;
+ background:#087ac1;
+ border:5px solid #d8b33c;
 }
 .fh{
-  width:50px;height:50px;
-  margin:auto;
-  border-radius:10px;
-  display:grid;
-  place-items:center;
-  background:#0876d8;
-  color:white;
-  font-size:22px;
+ width:50px;height:50px;
+ margin:auto;
+ border-radius:10px;
+ display:grid;
+ place-items:center;
+ background:#0876d8;
+ color:white;
+ font-size:22px;
 }
 .unit{font-size:11px;line-height:1.35}
-.screen{
-  display:none;
-  padding:20px 28px 35px;
-}
+.screen{display:none;padding:20px 28px 35px}
 .active{display:block}
+
 .foot{
-  font-size:115px;
-  margin:12px 0;
+ width:180px;
+ height:210px;
+ margin:10px auto;
+ position:relative;
 }
-h1{
-  margin:5px 0;
-  font-size:34px;
+.leg{
+ position:absolute;
+ width:58px;height:150px;
+ left:88px;top:0;
+ border-radius:25px 25px 40px 40px;
+ transform:rotate(12deg);
+ background:linear-gradient(90deg,#8ff0ff,#168fe7,#075bc7,#b8f8ff);
+ box-shadow:0 0 18px #42bfff88;
 }
-h2{
-  margin-top:35px;
-  font-size:28px;
+.sole{
+ position:absolute;
+ width:165px;height:70px;
+ left:8px;bottom:10px;
+ border-radius:60% 18% 42% 52%;
+ background:linear-gradient(#6ee8ff,#0872dc 65%,#074da8);
+ box-shadow:0 0 18px #3bc5ff99;
 }
+.hot{
+ position:absolute;
+ width:30px;height:30px;
+ border-radius:50%;
+ left:45px;bottom:45px;
+ background:#ff3e51;
+ box-shadow:0 0 10px 6px #ff526a99,0 0 26px 13px #ff526a55;
+}
+
+h1{margin:5px 0;font-size:34px}
+h2{margin-top:35px;font-size:28px}
 .sub{color:#657a94}
+
 .btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  margin:10px 0;
-  border-radius:10px;
-  font-size:16px;
-  font-weight:bold;
+ display:block;
+ width:100%;
+ padding:15px;
+ margin:10px 0;
+ border-radius:10px;
+ font-size:16px;
+ font-weight:bold;
 }
 .primary{
-  border:0;
-  background:#0868dc;
-  color:white;
+ border:0;
+ background:#0868dc;
+ color:white;
 }
 .secondary{
-  background:white;
-  color:#073b78;
-  border:1px solid #8bc3ff;
+ background:white;
+ color:#073b78;
+ border:1px solid #8bc3ff;
 }
 .input{
-  width:100%;
-  padding:16px;
-  font-size:18px;
-  border:1.5px solid #65aaf5;
-  border-radius:10px;
-  outline:none;
+ width:100%;
+ padding:16px;
+ font-size:18px;
+ border:1.5px solid #65aaf5;
+ border-radius:10px;
+ outline:none;
 }
 .card{
-  margin:20px 0;
-  padding:20px;
-  background:#edf7ff;
-  border-radius:14px;
-  text-align:left;
+ margin:20px 0;
+ padding:20px;
+ background:#edf7ff;
+ border-radius:14px;
+ text-align:left;
 }
 .preview{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:9px;
-  margin:18px 0;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:9px;
+ margin:18px 0;
 }
 .photo{
-  position:relative;
-  height:145px;
-  overflow:hidden;
-  border-radius:10px;
-  background:#ddd;
+ position:relative;
+ height:145px;
+ overflow:hidden;
+ border-radius:10px;
+ background:#ddd;
 }
 .photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+ width:100%;
+ height:100%;
+ object-fit:cover;
 }
 .remove{
-  position:absolute;
-  right:5px;
-  top:5px;
-  width:28px;
-  height:28px;
-  border:0;
-  border-radius:50%;
-  background:#fff;
-  font-weight:bold;
+ position:absolute;
+ right:5px;
+ top:5px;
+ width:28px;
+ height:28px;
+ border:0;
+ border-radius:50%;
+ background:white;
+ font-weight:bold;
+}
+.camera{
+ height:250px;
+ margin:20px 0;
+ border-radius:16px;
+ display:grid;
+ place-items:center;
+ background:#edf7ff;
+ font-size:70px;
 }
 .check{
-  width:105px;
-  height:105px;
-  margin:35px auto;
-  border-radius:50%;
-  background:#19b84f;
-  color:white;
-  display:grid;
-  place-items:center;
-  font-size:70px;
+ width:105px;
+ height:105px;
+ margin:35px auto;
+ border-radius:50%;
+ background:#19b84f;
+ color:white;
+ display:grid;
+ place-items:center;
+ font-size:70px;
 }
 .footer{
-  padding:25px 8px 18px;
-  background:#ccecff;
-  font-size:9px;
-  line-height:1.5;
+ padding:25px 8px 18px;
+ background:#ccecff;
+ font-size:9px;
+ line-height:1.5;
 }
 .footer strong{font-size:11px}
 </style>
@@ -153,196 +183,303 @@ h2{
 <div class="app">
 
 <div class="header">
-  <div>
-    <div class="logo"></div>
-    Ministry of Health<br>State of Kuwait
-  </div>
 
-  <div class="unit">
-    مستشفى الفروانية<br>
-    FARWANIYA HOSPITAL<br><br>
-    وحدة القدم السكري<br>
-    DIABETIC FOOT UNIT
-  </div>
-
-  <div>
-    <div class="fh">FH</div>
-    FARWANIYA HOSPITAL
-  </div>
+<div>
+<div class="logo"></div>
+Ministry of Health<br>
+State of Kuwait
 </div>
 
-<!-- SCREEN 1 -->
+<div class="unit">
+مستشفى الفروانية<br>
+FARWANIYA HOSPITAL<br><br>
+وحدة القدم السكري<br>
+DIABETIC FOOT UNIT
+</div>
+
+<div>
+<div class="fh">FH</div>
+FARWANIYA HOSPITAL
+</div>
+
+</div>
+
 <section id="home" class="screen active">
-  <div class="foot">🦶</div>
-  <h1>DFU Registry</h1>
-  <p class="sub">Simple Records • Better Care</p>
 
-  <button class="btn primary" onclick="go('search')">
-    ⓖ Sign in with Google →
-  </button>
+<div class="foot">
+<div class="leg"></div>
+<div class="sole"></div>
+<div class="hot"></div>
+</div>
 
-  <button class="btn secondary" onclick="go('search')">
-    👥 Continue →
-  </button>
+<h1>DFU Registry</h1>
 
-  <p><small>☁ Data will be saved to Google Drive</small></p>
+<p class="sub">
+Simple Records • Better Care
+</p>
+
+<button class="btn primary" onclick="go('search')">
+ⓖ Sign in with Google →
+</button>
+
+<button class="btn secondary" onclick="go('search')">
+👥 Continue →
+</button>
+
+<p>
+<small>☁ Data will be saved to Google Drive</small>
+</p>
+
 </section>
 
-<!-- SCREEN 2 -->
+
 <section id="search" class="screen">
-  <h2>Find Patient</h2>
-  <p class="sub">Enter Civil ID to search</p>
 
-  <input
-    id="civil"
-    class="input"
-    maxlength="12"
-    inputmode="numeric"
-    placeholder="Enter Civil ID">
+<h2>Find Patient</h2>
 
-  <button class="btn primary" onclick="findPatient()">
-    🔍 Search →
-  </button>
+<p class="sub">
+Enter Civil ID to search
+</p>
 
-  <p id="message"></p>
+<input
+ id="civil"
+ class="input"
+ maxlength="12"
+ inputmode="numeric"
+ placeholder="Enter Civil ID">
+
+<button class="btn primary" onclick="findPatient()">
+🔍 Search →
+</button>
+
+<p id="message"></p>
+
 </section>
 
-<!-- SCREEN 3 -->
+
 <section id="patient" class="screen">
-  <h2>Patient Found</h2>
 
-  <div class="card">
-    <strong>DFU Patient</strong><br><br>
-    <span id="patientCivil"></span>
-  </div>
+<h2>Patient Found</h2>
 
-  <button class="btn primary" onclick="go('photos')">
-    📷 Take Photos →
-  </button>
+<div class="card">
 
-  <button class="btn secondary" onclick="go('search')">
-    ← New Search
-  </button>
+<strong id="patientName">
+DFU Patient
+</strong>
+
+<br><br>
+
+<span id="patientCivil"></span>
+
+</div>
+
+<button class="btn primary" onclick="go('photos')">
+📷 Take Photos →
+</button>
+
+<button class="btn secondary" onclick="go('search')">
+← New Search
+</button>
+
 </section>
 
-<!-- SCREEN 4 -->
+
 <section id="photos" class="screen">
-  <h2>Take Photos</h2>
-  <p class="sub">Capture wound images</p>
 
-  <div class="foot">🦶</div>
+<h2>Take Photos</h2>
 
-  <label class="btn primary">
-    📷 Take / Select Photos
-    <input
-      type="file"
-      accept="image/*"
-      capture="environment"
-      multiple
-      hidden
-      onchange="addPhotos(this.files)">
-  </label>
+<p class="sub">
+Capture wound images
+</p>
+
+<div class="camera">
+📷
+</div>
+
+<label class="btn primary">
+
+📷 Take Photos
+
+<input
+ type="file"
+ accept="image/*"
+ capture="environment"
+ multiple
+ hidden
+ onchange="addPhotos(this.files)">
+
+</label>
+
 </section>
 
-<!-- SCREEN 5 -->
+
 <section id="review" class="screen">
-  <h2>Review Photos</h2>
-  <p class="sub">Preview before saving</p>
 
-  <div id="preview" class="preview"></div>
+<h2>Review Photos</h2>
 
-  <button class="btn primary" onclick="go('done')">
-    ✓ Save to Google Drive →
-  </button>
+<p class="sub">
+Preview before saving
+</p>
 
-  <button class="btn secondary" onclick="go('photos')">
-    📷 Add More Photos
-  </button>
+<div id="preview" class="preview"></div>
+
+<button class="btn primary" onclick="go('done')">
+✓ Save to Google Drive
+</button>
+
+<button class="btn secondary" onclick="go('photos')">
+← Add More Photos
+</button>
+
 </section>
 
-<!-- SCREEN 6 -->
+
 <section id="done" class="screen">
-  <h2>Saved Successfully!</h2>
 
-  <div class="check">✓</div>
+<h2>Saved Successfully!</h2>
 
-  <p>
-    Demo version<br>
-    Google Drive connection is the next step.
-  </p>
+<div class="check">✓</div>
 
-  <button class="btn primary" onclick="newSearch()">
-    👥 New Patient →
-  </button>
+<p>
+Photos saved to patient's folder<br>
+in Google Drive
+</p>
+
+<button class="btn primary" onclick="newSearch()">
+👥 New Patient →
+</button>
+
+<button class="btn secondary" onclick="go('search')">
+← Back to Search
+</button>
+
 </section>
+
 
 <div class="footer">
-  <strong>For Official Clinical Use</strong><br>
-  © 2026 Farwaniya Hospital – Diabetic Foot Unit<br>
-  Surgery Department | Ministry of Health – State of Kuwait<br>
-  DFU Registry • v1.0
+
+<strong>
+For Official Clinical Use
+</strong>
+
+<br>
+
+© 2026 Farwaniya Hospital – Diabetic Foot Unit
+
+<br>
+
+Surgery Department | Ministry of Health – State of Kuwait
+
+<br>
+
+DFU Registry • v1.0
+
 </div>
 
 </div>
+
 
 <script>
+
 function go(screen){
-  document.querySelectorAll(".screen").forEach(function(s){
-    s.classList.remove("active");
-  });
-  document.getElementById(screen).classList.add("active");
-  window.scrollTo(0,0);
+
+ document.querySelectorAll(".screen").forEach(function(s){
+  s.classList.remove("active");
+ });
+
+ document.getElementById(screen).classList.add("active");
+
+ window.scrollTo(0,0);
 }
+
 
 function findPatient(){
-  var civil=document.getElementById("civil").value.trim();
-  var msg=document.getElementById("message");
 
-  if(!/^\d{12}$/.test(civil)){
-    msg.innerText="Enter a valid 12-digit Civil ID";
-    return;
-  }
+ var civil =
+ document.getElementById("civil").value.trim();
 
-  msg.innerText="";
-  document.getElementById("patientCivil").innerText=
-    "Civil ID: "+civil;
+ var msg =
+ document.getElementById("message");
 
-  go("patient");
+ if(!/^\d{12}$/.test(civil)){
+
+  msg.innerText =
+  "Enter a valid 12-digit Civil ID";
+
+  return;
+ }
+
+ msg.innerText="";
+
+ document.getElementById("patientCivil").innerText =
+ "Civil ID: "+civil;
+
+ go("patient");
 }
+
 
 function addPhotos(files){
-  var box=document.getElementById("preview");
-  box.innerHTML="";
 
-  Array.from(files).forEach(function(file){
-    var div=document.createElement("div");
-    div.className="photo";
+ var box =
+ document.getElementById("preview");
 
-    var img=document.createElement("img");
-    img.src=URL.createObjectURL(file);
+ box.innerHTML="";
 
-    var remove=document.createElement("button");
-    remove.className="remove";
-    remove.innerText="×";
-    remove.onclick=function(){
-      div.remove();
-    };
+ Array.from(files).forEach(function(file){
 
-    div.appendChild(img);
-    div.appendChild(remove);
-    box.appendChild(div);
-  });
+  var div =
+  document.createElement("div");
 
-  if(files.length){
-    go("review");
-  }
+  div.className="photo";
+
+
+  var img =
+  document.createElement("img");
+
+  img.src =
+  URL.createObjectURL(file);
+
+
+  var remove =
+  document.createElement("button");
+
+  remove.className="remove";
+
+  remove.innerText="×";
+
+  remove.onclick=function(){
+   div.remove();
+  };
+
+
+  div.appendChild(img);
+
+  div.appendChild(remove);
+
+  box.appendChild(div);
+
+ });
+
+
+ if(files.length){
+
+  go("review");
+
+ }
+
 }
+
 
 function newSearch(){
-  document.getElementById("civil").value="";
-  document.getElementById("preview").innerHTML="";
-  go("search");
+
+ document.getElementById("civil").value="";
+
+ document.getElementById("preview").innerHTML="";
+
+ go("search");
+
 }
+
 </script>
 
 </body>
